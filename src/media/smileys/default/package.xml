@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package version="1.0" type="smileyset">
+	<pkginfo>
+		<name>iChat</name>
+		<author><![CDATA[iSmileys]]></author>
+		<homepage><![CDATA[<a href="http://ismileys.free.fr/">http://ismileys.free.fr/</a>]]></homepage>
+		<packager><![CDATA[J. Carlos Nieto &lt;<a href="mailto:xiam@users.sourceforge.net">xiam@users.sourceforge.net</a>&gt;]]></packager>
+		<notes>This is Freeware</notes>
+	</pkginfo>
+	<emoticon-map>
+		<emoticon file="alien.png">
+			<pattern><![CDATA[\(alien\)]]></pattern>
+			<sample><![CDATA[(alien)]]></sample>
+		</emoticon>
+		<emoticon file="angry.png">
+			<pattern><![CDATA[&gt;:(-?)\(]]></pattern>
+			<sample><![CDATA[>:( >:-(]]></sample>
+		</emoticon>
+		<emoticon file="baille.png">
+			<pattern><![CDATA[\(baille\)]]></pattern>
+			<sample><![CDATA[(baille)]]></sample>
+		</emoticon>
+		<emoticon file="blink.png">
+			<pattern><![CDATA[o[._]O]]></pattern>
+			<sample><![CDATA[o.O o_O]]></sample>
+		</emoticon>
+		<emoticon file="blushing.png">
+			<pattern><![CDATA[:(-?)\$]]></pattern>
+			<sample><![CDATA[:$ :-$]]></sample>
+		</emoticon>
+		<emoticon file="bye.png">
+			<pattern><![CDATA[\(bye\)]]></pattern>
+			<sample><![CDATA[(bye)]]></sample>
+		</emoticon>
+		<emoticon file="clope.png">
+			<pattern><![CDATA[\(cig\)]]></pattern>
+			<sample><![CDATA[(cig)]]></sample>
+		</emoticon>
+		<emoticon file="cool.png">
+			<pattern><![CDATA[B(-?)\)]]></pattern>
+			<sample><![CDATA[B-)]]></sample>
+		</emoticon>
+		<emoticon file="creve.png">
+			<pattern><![CDATA[\(creve\)]]></pattern>
+			<sample><![CDATA[(creve)]]></sample>
+		</emoticon>
+		<emoticon file="crying.png">
+			<pattern><![CDATA[:'(-?)\(]]></pattern>
+			<sample><![CDATA[:'( :'-(]]></sample>
+		</emoticon>
+		<emoticon file="cyclop.png">
+			<pattern><![CDATA[[oO](-?)\)]]></pattern>
+			<sample><![CDATA[O-) O)]]></sample>
+		</emoticon>
+		<emoticon file="devil.png">
+			<pattern><![CDATA[\(666\)]]></pattern>
+			<sample><![CDATA[(666)]]></sample>
+		</emoticon>
+		<emoticon file="dizzy.png">
+			<pattern><![CDATA[:(-?)[zZ]]]></pattern>
+			<sample><![CDATA[:-Z]]></sample>
+		</emoticon>
+		<emoticon file="ermm.png">
+			<pattern><![CDATA[\(ermm\)]]></pattern>
+			<sample><![CDATA[(ermm)]]></sample>
+		</emoticon>
+		<emoticon file="fear.png">
+			<pattern><![CDATA[\(fear\)]]></pattern>
+			<sample><![CDATA[(fear)]]></sample>
+		</emoticon>
+		<emoticon file="flowers.png">
+			<pattern><![CDATA[\(flowers\)]]></pattern>
+			<sample><![CDATA[(flowers)]]></sample>
+		</emoticon>
+		<emoticon file="getlost.png">
+			<pattern><![CDATA[\¬\¬]]></pattern>
+			<sample><![CDATA[¬¬]]></sample>
+		</emoticon>
+		<emoticon file="grin.png">
+			<pattern><![CDATA[\^\^]]></pattern>
+			<sample><![CDATA[^^]]></sample>
+		</emoticon>
+		<emoticon file="happy.png">
+			<pattern><![CDATA[;(-?)\)]]></pattern>
+			<sample><![CDATA[;) ;-)]]></sample>
+		</emoticon>
+		<emoticon file="heart.png">
+			<pattern><![CDATA[\(heart\)]]></pattern>
+			<sample><![CDATA[(heart)]]></sample>
+		</emoticon>
+		<emoticon file="dog.png">
+			<pattern><![CDATA[\(dog\)]]></pattern>
+			<sample><![CDATA[(dog)]]></sample>
+		</emoticon>
+		<emoticon file="innocent.png">
+			<pattern><![CDATA[O:(-?)\)]]></pattern>
+			<sample><![CDATA[O:) O:-)]]></sample>
+		</emoticon>
+		<emoticon file="kiss.png">
+			<pattern><![CDATA[:(-?)\*]]></pattern>
+			<sample><![CDATA[:-* :*]]></sample>
+		</emoticon>
+		<emoticon file="laughing.png">
+			<pattern><![CDATA[:(-?)(D|d)]]></pattern>
+			<sample><![CDATA[:D :-D]]></sample>
+		</emoticon>
+		<emoticon file="loucheur.png">
+			<pattern><![CDATA[8(-?)\|]]></pattern>
+			<sample><![CDATA[8| 8-|]]></sample>
+		</emoticon>
+		<emoticon file="loveu.png">
+			<pattern><![CDATA[\(loveu\)]]></pattern>
+			<sample><![CDATA[(loveu)]]></sample>
+		</emoticon>
+		<emoticon file="mrpo.png">
+			<pattern><![CDATA[\(mrpo\)]]></pattern>
+			<sample><![CDATA[(mrpo)]]></sample>
+		</emoticon>
+		<emoticon file="ninja.png">
+			<pattern><![CDATA[\(ninja\)]]></pattern>
+			<sample><![CDATA[(ninja)]]></sample>
+		</emoticon>
+		<emoticon file="noexpression.png">
+			<pattern><![CDATA[:(-?)\|]]></pattern>
+			<sample><![CDATA[:| :-|]]></sample>
+		</emoticon>
+		<emoticon file="geek.png">
+			<pattern><![CDATA[\(geek\)]]></pattern>
+			<sample><![CDATA[(geek)]]></sample>
+		</emoticon>
+		<emoticon file="phone.png">
+			<pattern><![CDATA[\(phone\)]]></pattern>
+			<sample><![CDATA[(phone)]]></sample>
+		</emoticon>
+		<emoticon file="pig.png">
+			<pattern><![CDATA[\(pig\)]]></pattern>
+			<sample><![CDATA[(pig)]]></sample>
+		</emoticon>
+		<emoticon file="pinch.png">
+			<pattern><![CDATA[&gt;&lt;]]></pattern>
+			<sample><![CDATA[><]]></sample>
+		</emoticon>
+		<emoticon file="policeman.png">
+			<pattern><![CDATA[\(police\)]]></pattern>
+			<sample><![CDATA[(police)]]></sample>
+		</emoticon>
+		<emoticon file="sad.png">
+			<pattern><![CDATA[:(-?)\(]]></pattern>
+			<sample><![CDATA[:-(]]></sample>
+		</emoticon>
+		<emoticon file="santa.png">
+			<pattern><![CDATA[\(santa\)]]></pattern>
+			<sample><![CDATA[(santa)]]></sample>
+		</emoticon>
+		<emoticon file="shaun.png">
+			<pattern><![CDATA[\(baah\)]]></pattern>
+			<sample><![CDATA[(baah)]]></sample>
+		</emoticon>
+		<emoticon file="shocked.png">
+			<pattern><![CDATA[:(-?)(o|O)]]></pattern>
+			<sample><![CDATA[:O]]></sample>
+		</emoticon>
+		<emoticon file="sick.png">
+			<pattern><![CDATA[\(sick\)]]></pattern>
+			<sample><![CDATA[(sick)]]></sample>
+		</emoticon>
+		<emoticon file="sleeping.png">
+			<pattern><![CDATA[\(zzz\)]]></pattern>
+			<sample><![CDATA[(zzz)]]></sample>
+		</emoticon>
+		<emoticon file="smile.png">
+			<pattern><![CDATA[:(-?)\)]]></pattern>
+			<sample><![CDATA[:) :-)]]></sample>
+		</emoticon>
+		<emoticon file="sorcerer.png">
+			<pattern><![CDATA[\(wizard\)]]></pattern>
+			<sample><![CDATA[(wizard)]]></sample>
+		</emoticon>
+		<emoticon file="stuart.png">
+			<pattern><![CDATA[\(teehee\)]]></pattern>
+			<sample><![CDATA[(teehee)]]></sample>
+		</emoticon>
+		<emoticon file="tongue.png">
+			<pattern><![CDATA[:(-?)[Pp]]]></pattern>
+			<sample><![CDATA[:P :-P]]></sample>
+		</emoticon>
+		<emoticon file="turned.png">
+			<pattern><![CDATA[:(-?)\]]]></pattern>
+			<sample><![CDATA[:] :-]]]></sample>
+		</emoticon>
+		<emoticon file="unsure.png">
+			<pattern><![CDATA[:(-?)\\]]></pattern>
+			<sample><![CDATA[:\ :-\]]></sample>
+		</emoticon>
+		<emoticon file="w00t.png">
+			<pattern><![CDATA[\(w00t\)]]></pattern>
+			<sample><![CDATA[(w00t)]]></sample>
+		</emoticon>
+		<emoticon file="wassat.png">
+			<pattern><![CDATA[:(-?)\?]]></pattern>
+			<sample><![CDATA[:? :-?]]></sample>
+		</emoticon>
+		<emoticon file="whistling.png">
+			<pattern><![CDATA[:(-?)((&quot;)|\")]]></pattern>
+			<sample><![CDATA[:" :-"]]></sample>
+		</emoticon>
+		<emoticon file="wink.png">
+			<pattern><![CDATA[;\)]]></pattern>
+			<sample><![CDATA[;)]]></sample>
+		</emoticon>
+		<emoticon file="wub.png">
+			<pattern><![CDATA[\(wub\)]]></pattern>
+			<sample><![CDATA[(wub)]]></sample>
+		</emoticon>
+		<emoticon file="zorro.png">
+			<pattern><![CDATA[\(zorro\)]]></pattern>
+			<sample><![CDATA[(zorro)]]></sample>
+		</emoticon>
+		<emoticon file="pirate.png">
+			<pattern><![CDATA[\(pirate\)]]></pattern>
+			<sample><![CDATA[(pirate)]]></sample>
+		</emoticon>
+	</emoticon-map>
+</package>

@@ -1,0 +1,226 @@
+====================================================================
+                  Gekko 0.5.x | Installation Notes
+====================================================================
+
+--------------------------------------------------------------------
+	Installation requirements
+====================================================================
+1. Basic requirements
+---------------------
+* A complete understanding and agreement to the GNU/GPL.
+* HTTP Server (Gekko was developed using Apache) which must be working
+  with PHP.
+* PHP Version >= 4.3.6
+* MySQL Version >= 3.23.54
+* Minimun UNIX commands knowledge.
+* Mozilla Firefox (if you want to use our Visual Content Editor)
+
+Please notice that Gekko is not currently being tested under a
+Windows(R) server, so, it will probably fails because the way Gekko
+access some files... We don't know when we're going to start testing
+under that environment... If you want Gekko running on such a system
+stop complaining and start programming!
+
+2. Useful features
+------------------
+PHP's useful features:
+* GD Libray for image manipulation
+* bz2 and zlib for data compression.
+* fsockopen(), mail(), functions enabled.
+* php.ini:
+	register_globals OFF
+
+--------------------------------------------------------------------
+	How to install/upgrade
+====================================================================
+
+A fresh installation
+---------------------
+
+For those who can't wait:
+	Unpack Gekko, browse to install.php script and follow on-screen
+	directions, it will be easier if you have FTP access to your site.
+
+1.- Unpack Gekko
+
+	Gekko is distributed compressed as a .tar.gz or a .tar.bz2 file,
+	you can uncompress those kind of files using the "tar" program as
+	follows:
+
+	me@unix $ tar -vxzf gekko-version.tar.gz
+
+	You'd change -xvzf options for -xvjf if you downloaded a .tar.bz2
+	file.
+
+	If you still use Windows(R), you can use an open source program
+	like 7-zip (http://www.7-zip.org) to extract .tar.gz or tar.bz2
+	files.
+
+	After file extraction a directory named gekko-version is created,
+	you'd change to that directory and copy contents of ./src/ to the
+	location you want Gekko to be installed:
+
+	me@unix $ cd gekko-version
+	me@unix $ cp -r src/* ~/public_html
+
+	You can also upload Gekko via some protocol like FTP to a remote
+	server, please refere to your protocol client documentation to
+	do so.
+
+2.- Fire up your favorite web browser and point it to Gekko's
+	install.php script
+
+	http://www.example.org/install.php
+
+	Chose you prefered site language.
+
+	If you have an FTP server running on that server, you can let
+	Gekko handle file permission corrections, if you don't trust on
+	Gekko or if you want to do things your way you may set file
+	permissions by hand:
+
+	me@unix $ chmod a+w data temp dbconf.php
+
+	In the above example "data", "temp" and "dbconf.php" were made
+	world-writable. We recommend you made them writable _only_ for
+	the user who is running your HTTP server. However this is a
+	potential security risk there is no other way Gekko could save
+	and access files. (If you know other _fast_ method without using
+	database queries, please let us know)
+
+	In Windows(R) systems there is no need to do such a thing since
+	by default (AFAIK) every user may write down a file wherever he
+	wish.
+
+	Make sure you're selecting "FRESH INSTALLATION" and no other
+	method.
+
+	Keep going with on-screen directions and finish installation.
+
+	After installation completes, you must change permissions of
+	dbconf.php
+	to be readable-only:
+
+	me@unix $ chmod 755 dbconf.php
+
+	If Gekko keeps asking for file permission corrections  and you're
+	sure you've performed those, you can skip directly to index.php.
+
+	Now that you have a working system, you'd delete "install"
+	directory and "install.php" scripts for security reasons (there
+	is no need for those files anyways).
+
+3.- Login as the user you've just created (that's the superuser) and
+	start configuring your website.
+
+4.- Please take your time to know Gekko and for writing us your
+	feelings, suggestions or questions about it, send us a postcard
+	of the place you live or something like that, we like those :).
+
+	All kinds of contributions are appreciated.
+
+	Thank you for using Gekko, we hope you can enjoy this software
+	as we enjoy to develop it!
+
+Upgrading and existing Gekko's package
+--------------------------------------
+
+	YOU SHOULD ALWAYS MAKE A DATABASE BACKUP BEFORE TRYING TO UPGRADE.
+	There is no way to recover your data if you (or we) commited a
+	mistake and you didn't backup your database. So please, take a
+	minute to do so.
+
+	Notice that due to differences between releases prior to 0.5, it's
+	practically impossible to make a clean upgrade to 0.5+ series,
+	however, some important data could be restored (check
+	install/patches directory).
+
+	At the end of April 2006, Gekko will not be shipped with 0.4
+	patches anymore.
+
+For those who can't wait:
+	Unpack a fresh Gekko package under a temporary directory, change
+	directory to ./gekko-newversion/src and delete temp, data,
+	dbconf.php and cgdb.php scripts, overwrite your old package files
+	with the new ones, point your favorite browser to Gekko's
+	install.php script and follow on-screen directions. Be sure you're
+	selecting "UPGRADE" and no "FRESH INSTALLATION"!
+
+1.- Backup your database, you can do this the quick way (if you're using
+	mysql) as follows:
+
+	me@unix $ mysqldump -u my_mysql_user -p my_database > backup.sql
+	me@unix $ gzip backup.sql
+
+	You also can use Gekko's backup module.
+
+	If you want to make a whole Gekko backup you must compress "data"
+	and "temp" directories
+
+	me@unix $ cd ~/public_html
+	me@unic $ tar -cvzf ~/gekko-data.tar.gz data temp
+
+2.- Get and unpack a Gekko recent version to a temporary directory
+	(check step 1 of installation instructions), let's suppose you're
+	extracting your new package to ~/tmp and that your older package
+	was installed under ~/public_html.
+
+	Change to your NEW-PACKAGE/src directory and delete those files
+	and directories:
+	- dbconf.php
+	- cgdb.php
+	- temp
+	- data
+
+	Change to your OLD-PACKAGE/ directory and backup "dbconf.php"
+
+	me@unix $ cp dbconf.php ~/dbconf.backup
+	me@unix $ chmod 700 ~/dbconf.backup
+
+3.- Overwrite all your files from your NEW-PACKAGE/src to your
+	OLD-PACKAGE/ directory.
+
+	If you deleted "dbconf.php" from the old-package, you could
+	restore it, just change permissions of "dbconf.php", it must be
+	world-writable
+
+	me@unix $ chmod a+w dbconf.php
+
+	Fire up your favorite web browser and point it to Gekko's
+	install.php script and follow on-screen directions.
+
+	Be sure you're selection UPGRADE instead of FRESH INSTALLATION or
+	you could lost all your database data!
+
+	Change permissions of dbconf.php to be read-only just as you
+	did in installation procedure.
+
+--------------------------------------------------------------------
+	Release notes
+====================================================================
+
+* Gzip output is enabled by default (if zlib is loaded), this feature
+  can save lots of bandwith usage.
+
+* There is a known MSIE bug when handling PNG images (alpha channel
+  doesn't work), however, Gekko is using a ugly hack to add
+  ugly HTML code that forces an ugly browser, MSIE, to use alpha
+  channel. It makes that browser very slow and some users reported
+  MSIE just crashes, but we really don't care.
+  If you want to continue using IE you should pray for your salvation
+  before the second coming of Jesuschrist and upgrade to IE7 just to view
+  correct PNG transparency (I really don't know if MSIE 7 will include
+  decent PNG support).
+  What can I do?
+  - You can deactivate that patch from the administration panel, you will
+  see ugly PNG images with gray blackground where it is supposed to have
+  transparency.
+  - You can also reduce the amount of PNG images Gekko uses by
+  deactivating menu icons and/or tweaking templates.
+  - You can use a good browser that supports standards, like Mozilla
+  Firefox, and start "spreading the word"
+  - You can convert all .png images in .gif ones, but believe me, those
+  will look really bad.
+  - You can blame Gekko developers :).
+
+----------

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package version="1.0" type="module">
+	<module>
+		<name>blocks</name>
+		<group>7</group>
+		<author><![CDATA[J. Carlos Nieto &lt;<a href="mailto:xiam@users.sourceforge.net">xiam@users.sourceforge.net</a>&gt;]]></author>
+		<homepage><![CDATA[<a href="http://www.gekkoware.org">http://www.gekkoware.org</a>]]></homepage>
+		<phpver>4.3</phpver>
+	</module>
+	<release>
+		<version>0.8</version>
+		<requires>
+			<module>modules</module>
+			<file>lib/auth.inc.php</file>
+			<file>lib/core.lib.php</file>
+		</requires>
+		<author><![CDATA[J. Carlos Nieto &lt;<a href="mailto:xiam@users.sourceforge.net">xiam@users.sourceforge.net</a>&gt;]]></author>
+		<notes>
+			<![CDATA[
+			Core module.
+			]]>
+		</notes>
+		<changelog>
+			<![CDATA[
+
+			]]>
+		</changelog>
+	</release>
+</package>

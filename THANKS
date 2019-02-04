@@ -1,0 +1,49 @@
+THANKS TO:
+==========================================================================
+	** Designers
+	-	Raul Meza Gatica <rmg@mezagatica.cl>
+			The creator of our project's official logo, isn't that a
+			wonderful job ;)?
+			You can visit his website at:
+			http://www.kalakfactory.com
+	-	David Vignoni <dave@icon-king.com>
+			Great designer, he is the creator of the Nuvola icon theme
+			Gekko uses by default.
+			http://www.icon-king.com
+
+	** Translators
+		Marc Garcia <garcia.marc@gmail.com> (ca)
+		Gabor Tjong A Hung <gvtjongahung@users.sourceforge.net> (en, nl)
+
+	** Authors of code I used/read on this release
+	-	Ulf Harnhammar <metaur@users.sourceforge.net>
+			I've read a PHP project of him, kses (http://sf.net/projects/kses),
+			before writing Gekko's HTML filter.
+	-	Nigel McNie <nigel@geshi.org>
+			Creator of GeSHi, a wonderful PHP based syntax highlighter included
+			with Gekko.
+	-	Jorge Adame <jordi@jordi.net>, Diego Carrera <diego@debianmexico.org>
+			For their Ajallerix project
+			(http://forge.novell.com/modules/xfmod/project/?ajallerix), a great
+			resource for me when I began to learn about Ajax.
+
+	** Other
+	-	Leo Utskot <leo@copyleft.com.mx>
+			He gave us free hosting for Gekko in one of his servers.
+	-	Andr3x <andres.rincon@luansystems.com>
+			For his donation of two years of webhosting, thanks!
+	-	Marc Garcia <garcia.marc@gmail.com>
+			He pointed out many bugs in Gekko under MySQL 5 and showed me how to fix
+			them.
+	-	Intituto de Computación y Electrónica de la UTM (utm.mx)
+			They allowed me to host Gekko's website on one of their servers for a while.
+	-	andsux <andsux@gmail.com> and his friends. They showed me some security issues
+			(XSS) in Gekko 0.7
+
+And special thanks to all my friends, although they don't like
+computers as much I do, they support my geekyness and opened a place to rest
+my soul.
+
+And all those that I forgot to mention.
+
+----------

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: media/
+Disallow: lib/
+Disallow: temp/
+Disallow: templates/
+Disallow: modules/
+Disallow: lang/
+Disallow: js/

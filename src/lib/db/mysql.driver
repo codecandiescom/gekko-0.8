@@ -1,0 +1,239 @@
+<?php
+
+	/*
+	*	Gekko - Open Source Web Development Framework
+	*	------------------------------------------------------------------------
+	*	Copyright (C) 2004-2006, J. Carlos Nieto <xiam@users.sourceforge.net>
+	*	This program is Free Software.
+	*
+	*	@package	Gekko
+	*	@license	http://www.gnu.org/copyleft/gpl.html GNU/GPL License 2.0
+	*	@author		J. Carlos Nieto <xiam@users.sourceforge.net>
+	*	@link		http://www.gekkoware.org
+	*/
+
+	if (!defined("IN-GEKKO")) die("Get a Life!");
+
+	Class Database extends Database_Common {
+
+		var $query = array();
+		var $c = 0, $dbname;
+		// gets/sets query counter
+		function counter($count = false) {
+			if ($count) $this->c++;
+			return $this->c;
+		}
+		// opens connection and selects database
+		function open($host, $user, $pass, $database) {
+			if (($conn = mysql_connect($host, $user, $pass)) !== false) {
+				return mysql_select_db($this->dbname = $database) ? $conn : false;
+			}
+			return false;
+		}
+		// closes connection
+		function close () {
+			if ($this->link)
+				return mysql_close($this->link);
+			return false;
+		}
+		function query ($query, $file = null, $line = null, $silent = false) {
+
+			// executing query
+			$result = mysql_query($query);
+
+			if (GEKKO_ENABLE_DEBUG > 1) {
+				$this->query[] = Array(
+					"file" => $file,
+					"line" => $line,
+					"query" => $query,
+					"error" => mysql_error(),
+					"affected_rows" => $this->affectedRows($result)
+				);
+			}
+
+			// $this->result stores the last query ID if ($silent == false)
+			if (!$silent)
+				$this->result = $result;
+
+			// when an error ocurrs
+			if (!$result && $file && $line) {
+				if (!$silent)
+					trigger_error("Query syntax error.".(GEKKO_ENABLE_DEBUG ? " ".mysql_error()." '$query'": ""), E_USER_ERROR);
+			}
+
+			// incrementing query counter
+			$this->counter(true);
+
+			return $result;
+		}
+		function _limit($limit = null) {
+			if (!$limit)
+				return null;
+			return "LIMIT $limit";
+		}
+		function _where($where, $conjunction = "AND") {
+			if (!$where)
+				return null;
+			if (is_array($where)) {
+				// 	TODO: and, or, not
+				trigger_error("Not already implemented.", E_USER_ERROR);
+				return null;
+			}
+			return "WHERE $where";
+		}
+		function _order($order = null) {
+			if (!$order)
+				return null;
+			return "ORDER BY $order";
+		}
+		function _set($set) {
+			$rows = array();
+			foreach ($set as $row => $value) 
+				$rows[] = "{$row} = ".(is_array($value) ? $value[0] : "'{$value}'");
+			return implode(",\n", $rows);
+		}
+		function insert($table, $columns) {
+			$rows = $vals = array();
+			foreach ($columns as $row => $val) {
+				$rows[] = $row;
+				$vals[] = is_array($val) ? $val[0] : "'{$val}'";
+			}
+			$q = $this->query(
+				"
+					INSERT INTO ".dbTable($table)."
+					(".implode(", ", $rows).")
+					VALUES (".implode(", ", $vals).")
+				", __FILE__, __LINE__, true
+			);
+			return $q;
+		}
+		function select($table, $columns = array('*'), $where = null, $limit = null, $order = null) {
+			$rows = array();
+			$q = $this->query(
+				"
+				SELECT
+					".implode(',', $columns)."
+				FROM ".dbTable($table)."
+				".$this->_where($where)."
+				".$this->_limit($limit)."
+				".$this->_order($order)."
+				", __FILE__, __LINE__, true
+			);
+			while ($row = $this->fetchRow($q))
+				$rows[] = $row;
+			return $rows;
+		}
+		function update($table, $set, $where = null) {
+			$q = $this->query("
+				UPDATE
+					".dbTable($table)."
+				SET
+					".$this->_set($set)."
+				".$this->_where($where)."
+			", __FILE__, __LINE__, true);
+			return $q;
+		}
+		function drop($table) {
+			$q = $this->query(
+				"DROP TABLE IF EXISTS ".dbTable($table)."",
+				__FILE__, __LINE__, true
+			);
+			return $q;
+		}
+		function delete($table, $where = null) {
+			$q = $this->query(
+				"DELETE FROM ".dbTable($table)."
+				".$this->_where($where)."
+				", __FILE__, __LINE__, true
+			);
+		}
+		function escape($string) {
+			return mysql_real_escape_string($string);
+		}
+		function affectedRows($id = null) {
+			if (!$id)
+				$id = $this->result;
+			return mysql_affected_rows();
+		}
+		function numRows($id = null) {
+			if (!$id) $id = $this->result;
+			return mysql_num_rows($id);
+		}
+		function findFreeId($table, $field = "id", $bgn = 1, $limit = -1) {
+			$search = 1;
+			$id = $bgn;
+			
+			while ($search && (($limit < 0) || ($id <= $limit))) {
+				$q = $this->query("SELECT $field FROM ".dbTable($table)." WHERE $field = '$id'", __FILE__, __LINE__, true);
+				$search = $this->numRows($q);
+				if ($search)
+					$id++;
+			}
+		
+			if ($limit > 0 && $id > $limit)
+				trigger_error("No more free IDs...", E_USER_ERROR);
+		
+			return $id;
+		}
+		function getError () {
+			return mysql_error();
+		}
+		function fetchRow ($id = false, $flag = MYSQL_ASSOC) {
+			if (!$id) $id = $this->result;
+			return mysql_fetch_array($id, $flag);
+		}
+		function getFields($id = false) {
+			if (!$id) $id = $this->result;
+			$f = array();
+			for ($i = 0; $i < mysql_num_fields($id); $i++) {
+				$f[$i] = mysql_field_name($id, $i);
+			}
+			return $f;
+		}
+		function getTables() {
+			return mysql_list_tables($this->dbname);
+		}
+		function pager ($query, $link, $pagnum = 1, $limit = 0) {
+
+			if (!$limit)
+				$limit = 8;
+
+			$q = $this->query($query, __FILE__, __LINE__);
+
+			$items = $this->numRows($q);
+			if ($items) {
+				$row = $this->fetchRow($q);
+				if (isset($row["total_items"])) {
+					$items = $row["total_items"];
+				}
+			}
+
+			/* page == last ? */
+			if ($pagnum == "last")
+				$pagnum = intval($items/$limit) + intval(($items%$limit) ? 1 : 0);
+
+			if (($pagnum = intval($pagnum)) < 1)
+				$pagnum = 1;
+
+			// guessing begin
+			$begin = (($pagnum-1)*$limit);
+			if ($begin > $items) $begin = 1;
+
+			// calculating total pages
+			$pages = ($items/$limit);
+			if ($pages > intval($pages)) $pages = intval($pages)+1;
+
+			// creating pager
+			$pager = createPager($pages, $pagnum, $link);
+
+			$return = Array (
+				"sql" => "LIMIT $begin,$limit",
+				"begin" => $begin,
+				"limit" => $limit,
+				"html" => $pager
+			);
+
+			return $return;
+		}
+	}
+?>

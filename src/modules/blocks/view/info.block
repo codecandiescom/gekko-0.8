@@ -1,0 +1,4 @@
+<div class="info" style="{V_CSSTEXT}">
+	<h3>{V_BLOCK_ICON} {V_BLOCK_TITLE}</h3>
+	<div class="content">{V_BLOCK_CONTENT}</div>
+</div>

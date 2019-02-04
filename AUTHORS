@@ -1,0 +1,67 @@
+	GEKKO AUTHORS
+==============================================================================
+
+MAIN DEVELOPERS
+------------------------------------------------------------------------------
+José Carlos Nieto Jarquín <xiam@users.sourceforge.net>
+	project leader, developer, designer
+
+Josué Gerardo Gutierrez <blacknash@users.sourceforge.net>
+	developer, designer
+
+David Valdez Torres <gnuget@lidsol.org>
+        developer
+
+SPECIAL COLABORATORS
+------------------------------------------------------------------------------
+Gabor Tjong A Hung <gvtjongahung@users.sourceforge.net>
+	translator, developer
+
+Raúl Meza Gatica <rmg@mezagatica.cl>
+	official logo designer
+
+CODE CONTRIBUTORS
+------------------------------------------------------------------------------
+
+TRANSLATORS
+------------------------------------------------------------------------------
+Marc García <garcia.marc@gmail.com>
+	Catalan (before Gekko 0.7)
+
+Gabor Tjong A Hung <gvtjongahung@users.sourceforge.net>
+	Dutch, English
+
+INDIRECT CONTRIBUTIONS (THIRD PARTY PROJECTS)
+------------------------------------------------------------------------------
+David Vignoni <dave@icon-king.com>
+	Nuvola's icon theme designer
+
+Nigel McNie <nigel@geshi.org>
+	GeSHi's author, our code synthax highlighter
+
+	JOIN THE TEAM!
+==============================================================================
+	You don't have to be a programmer to contribute with Gekko!, you can help
+	us providing graphics, themes, stylesheets, documentation,
+	and/or translations.
+
+	If you're a software developer and you want to participate in this project,
+	contact us! You can contribute with portions of code, patches, features,
+	etc., feel free to hack on Gekko!
+
+	Thank you!
+
+==============================================================================
+
+This software wouldn't be possible without Open Source Software:
+
+	* PHP Scripting Language (http://www.php.net)
+	* MySQL Database Server (http://www.mysql.com)
+	* Apache Web Server (http://www.apache.org)
+	* Quanta Plus Web Development Environment (http://www.kdewebdev.org)
+	* The GIMP (http://www.gimp.org)
+	* Mozilla Firefox (http://www.mozilla.org/products/firefox)
+
+Please read file THANKS.
+
+----------

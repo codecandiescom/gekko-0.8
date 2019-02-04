@@ -1,0 +1,12 @@
+IndexIgnore *
+<Files *.php>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Rewrite engine for subdomain based installations.
+# For example http://user.example.org
+# Make sure you enabled GEKKO_SUBDOMAIN_MODE in conf.php file.
+RewriteEngine Off
+RewriteCond %{HTTP_HOST} ^([^.]+)\..*$ [NC]
+RewriteRule ^(.*)$	/virtual/%1/data/$1 [L]

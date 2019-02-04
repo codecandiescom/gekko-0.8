@@ -1,0 +1,34 @@
+Version 0.7.5
+=======================================================================================
+* Created mkpackage.py, this script will replace mkpackage.pl
+* Changed default avatar.
+* Replaced -complete distribution with -portal. The extra modules will be available for
+  download through the website.
+* Added an icon to show the current default module
+* Added hide/show settings for blocks module
+* Removed doc/ from distribution (we will create online documentation in our wiki)
+* Fixed some XSS issues, thanks to andsux <andsux@gmail.com> and his friends for
+  letting me know
+* Changed many function names (pattern based)
+* Upgraded to Geshi 1.0.7.14
+* Another bugfix for PHP running as CGI
+* The php4u bugfix was causing another (stupid) bug
+* Replaced Gekko's effects.js and dragandrop.js with the script.aculo.us set
+* Replacing some javascript with the scriptacuous collection, implemented in blocks
+  and menu-links, it is just that i'm starting to see that my javascript doesn't
+  work well under IE without extra hacks... and scriptaculous is way better than
+  our implementations
+* Added a warning about using IE and Gekko in the installer
+* Added credits for icons and smileys
+* Added search buttons to some modules, bugfixes in gallery
+* Create menu link when installing a module
+* A new Example module (available through SVN and web package only)
+* Minor bugfixes
+* nibblesmx contibuted a calendar for the blocks module
+
+Version 0.7
+======================================================================================
+* Flood protection has been made less sensative.
+* More code has been translated to english.
+* Added more AJAX to reduce loading time and give a better user expierience and feel
+* Updated Blog to use the Geshi 1.0.7.12(Latest version)

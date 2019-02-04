@@ -1,0 +1,74 @@
+Gekko, Open Source Web Development Framework, Version 0.5
+==============================================================================
+	Copyright (C) 2004-2006, Jose Carlos Nieto (xiam@users.sourceforge.net)
+	Project page: http://sourceforge.net/projects/gekkoware
+	Official site: http://www.gekkoware.org
+
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+	+------------------------------------------------------------------------+
+	| Please notice that I'm not a natural English speaker, so I suppose I'm |
+	| having many gramatical mistakes, so, when you found any, please send   |
+	| me an note to correct me and I'll be glad with you.                    |
+	+------------------------------------------------------------------------+
+
+What is Gekko?
+==============================================================================
+	Gekko is an Open Source solution for your Web Content Management
+	necessities which integrates a variety range of useful features. With
+	Gekko you can create, manage, maintain or develop personal to large
+	community websites in just a few minutes.
+
+	For installation instructions, see the INSTALL file.
+
+Homepage
+-----------------------------------------------------------------------------
+	Gekko's home page is at http://www.gekkoware.org, please visit
+	this site for news, releases, patches, etc.
+
+IRC Channel
+-----------------------------------------------------------------------------
+	There is an IRC Channel (#gekko) on irc.freenode.org where you can talk
+	about anything with our developers.
+
+Maling lists
+-----------------------------------------------------------------------------
+	Please check out and suscribe to our mailing lists at:
+		http://sourceforge.net/mail/?group_id=117004
+
+	When you run into a problem, the best way we can help you is by answering a
+	letter you must send to gekkoware-support@lists.sourceforge.net.
+
+	NOTE: Please, do not send messages asking directly for support to any of
+	our developers e-mail unless you want your e-mail to be ignored! You know,
+	this is Free Software, and also is distributed for free, none of our
+	developers are receiving a salary for answer questions, so, please, use
+	the mailing lists!
+
+Bugs?
+-----------------------------------------------------------------------------
+	Report bugs to our bug tracker:
+
+	http://sourceforge.net/tracker/?group_id=117004&atid=676653
+
+	Please include relevant information (when neccessary) like:
+
+	* Gekko version.
+	* PHP and MySQL version.
+	* phpinfo();.
+	* URL where do you get the error.
+	* Error message, if exists.
+
+----------

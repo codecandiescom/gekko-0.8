@@ -1,0 +1,18 @@
+Bienvenido a {C_SITE.NAME}, {V_REALNAME}!
+
+Usuario: {V_USERNAME}
+Contraseña: {V_PASSWORD}
+<!--if($V_CONFIRMATION_CODE)-->
+Codigo de confirmación: {V_CONFIRMATION_CODE}
+<!--endif-->
+
+Utiliza estos datos para
+
+Ingresar:
+{=createLink("index.php/module=users/action=login")=}
+<!--if($V_CONFIRMATION_CODE)-->
+Confirmar la autenticidad de tu cuenta:
+{=createLink("index.php/module=users/action=confirm")=}
+<!--endif-->
+--
+{C_SITE.NAME} - <{C_SITE.CONTACT_MAIL}>

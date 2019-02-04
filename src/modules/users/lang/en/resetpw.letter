@@ -1,0 +1,8 @@
+Username: {V_USERNAME}
+Confirmation code: {V_CONFIRMATION_CODE}
+
+Reset password:
+{=createLink("index.php/module=users/action=resetpasswd?user={V_USERNAME}&email={V_EMAIL}&code={V_CONFIRMATION_CODE}")=}
+
+--
+{C_SITE.NAME} - <{C_SITE.CONTACT_MAIL}>

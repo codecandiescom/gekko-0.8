@@ -1,0 +1,41 @@
+<?php
+	$cgdb = Array (
+		"admin" => 1,
+		"modules" => 2,
+		"conf" => 3,
+		"groups" => 4,
+		"users" => 5,
+		"categories" => 6,
+		"blocks" => 7,
+		"pages" => 8,
+		"blog" => 9,
+		"menu-editor" => 10,
+		"comments" => 11,
+		"packages" => 12,
+		"files" => 13,
+		"statistics" => 14,
+		"extensions" => 15,
+		"contact" => 16,
+		"gallery" => 17,
+		"polls" => 18,
+		"news" => 19,
+		"forums" => 20,
+		"backup" => 21,
+		//"friends" => 22,
+		//"phrases" => 23,
+		"ipban" => 24,
+		"downloads" => 25,
+		"search" => 26,
+		"calendar" => 27,
+		"glossary" => 28,
+		"messages" => 29,
+		"example" => 30,
+		"banners" => 31,
+		"i18n" => 32,
+		"story" => 33,
+		"challenge" => 34, // private
+		"signin" => 35, // private
+		"normal_user" => 500,
+		"anonymous" => 501
+	);
+?>

@@ -1,0 +1,552 @@
+/*
+	<author>
+		Tao's default stylesheet created by <a href="http://xiam.underlife.org">xiam</a> using <a href="http://www.gimp.org">The GIMP</a>
+	</author>
+	<license>
+		http://www.gnu.org/copyleft/gpl.html GNU/GPL License 2.0
+	</license>
+	<acknowledgements>
+		The green gekko header's background image was taken from: http://www.....
+	</acknowledgements>
+*/
+
+BODY {
+	font-family: "Lucida Grande", "Verdana", "Arial";
+	color: #666;
+	background: #efefef url("body-background.png");
+	line-height: 150%;
+}
+INPUT, SELECT, TEXTAREA {
+	color: #888;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+INPUT:hover, TEXTAREA:hover {
+	color: #999;
+	background: #ffffff;
+}
+INPUT:focus, TEXTAREA:focus {
+	color: #000;
+	background: #FBFDFF;
+}
+A, A:link, A:visited {
+	color: #4388FF;
+	text-decoration: none;
+}
+A:hover {
+	color: #06c;
+	text-decoration: underline;
+}
+/* headings */
+H1 {
+	color: #333;
+	border-bottom: 1px solid #ddd;
+}
+H2 {
+	color: #bbb;
+	border-bottom: 1px solid #eee;
+}
+H2 IMG {
+	border: 1px dotted #eee;
+	background: #fff;
+}
+H3 {
+	color: #bebebe;
+}
+H4 {
+	color: #ccc;
+}
+H5 {
+	color: #ccc;
+}
+BUTTON {
+	color: #aaa;
+	background: #fff url("button-background.png") repeat-x;
+	border: 1px solid #ddd;
+	border-left: 1px solid #efefef;
+	border-top: 1px solid #efefef;
+}
+BUTTON:hover {
+	color: #333;
+	border: 1px solid #aaa;
+}
+CODE, .code {
+	color: #000;
+	border: 1px solid #eee;
+	background: #fff;
+}
+/* photo */
+IMG.photo {
+	border: 1px solid #ccc;
+	background: #eee;
+}
+IMG.photo:hover {
+	border: 1px solid #666666;
+}
+DIV.photo {
+	border: 1px dashed #ddd;
+	background: #f8f8f8;
+}
+/* the main container is the space between the body and the #framework */
+#container {
+	margin: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	width: 932px;
+}
+#container .cbody {
+	margin: 0px;
+	color: #000;
+	padding: 0px 5px 0px 5px;
+	background: #fefefe url("container-background.png");
+	width: 922px;
+}
+#container .chead {
+	margin: 0px;
+	color: #000;
+	height: 15px;
+	padding: 0px 5px 0px 5px;
+	background: #fefefe url("container-top.png");
+	width: 922px;
+}
+#container .cbottom {
+	margin: 0px;
+	color: #000;
+	height: 20px;
+	padding: 0px 5px 0px 5px;
+	background: #fefefe url("container-bottom.png");
+	width: 922px;
+}
+
+/* the framework is a container for the skeleton table */
+#framework {
+	color: #000;
+	background: #f3f3f3;
+	padding: 0px;
+}
+/* left and right block containers */
+#td_blockL, #td_blockR {
+	width: 200px;
+	padding: 2px;
+	vertical-align: top;
+}
+/* some other block containers */
+#td_blockD, #td_blockC {
+	padding: 3px;
+}
+.toolbox {
+	padding: 5px;
+	border: 1px solid #eee;
+	background: #fefefe;
+	margin: 8px;
+}
+/* top block container */
+#td_blockU {
+	background: #333;
+	padding: 2px;
+	padding-top: 0px;
+	margin: 0px;
+	padding-bottom: 0px;
+	vertical-align: bottom;
+}
+#td_blockU A {
+	color: #aaa;
+}
+#td_blockU A:hover {
+	color: #eee;
+}
+/* horizontal menus */
+#td_blockU .MenuList LI {
+	font-weight: bold;
+	color: #aaa;
+	margin: 0px;
+	margin-bottom: 0px;
+	margin-left: -8px;
+	border: none;
+	background: #000 url("U-button-background.png") no-repeat;
+	padding: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 7.5pt;
+	display: block;
+	float: right;
+}
+#td_blockU .MenuList LI:hover {
+	color: #fff;
+	background: #666 url("U-button-background-hover.png") no-repeat;
+}
+#td_blockU .MenuList LI UL {
+	background: #111;
+	border: 1px solid #000;
+}
+#td_blockU .MenuList LI:hover UL LI {
+	color: #fff;
+	opacity: 1;
+}
+#td_blockU .MenuList LI:hover IMG {
+	border: none;
+	background: none;
+}
+#td_blockC FORM HR {
+	border: none;
+	border-bottom: 1px solid #e8e8e8;
+}
+#td_blockC .contentBlock {
+	overflow: auto;
+}
+.contentBlock FORM {
+	background: #f8f8f8;
+	color: #666;
+	border: 1px solid #ddd;
+}
+/* header  */
+#pageHeader {
+	width: 922px;
+	height: 185px;
+	background: #333 url("header-logo.png") no-repeat left top;
+	display: block;
+}
+/* site name */
+#pageHeader H1 {
+	font-size: 50pt;
+	color: #ccc;
+	position: relative;
+	border: 0;
+	top: 50px;
+	left: 50px;
+	display: inline;
+	font-weight: bold;
+}
+/* site slogan */
+#pageHeader H2 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 15pt;
+	color: #777;
+	border: none;
+	position: relative;
+	top: 120px;
+	left: 120px;
+	padding-left: 12px;
+}
+/* footer */
+#pageFooter {
+	font-variant: small-caps;
+	letter-spacing: 1pt;
+	text-align: center;
+	color: #888;
+	padding: 8px;
+	font-size: x-small;
+	margin: 3px;
+}
+/* note showed at the bottom of the page */
+#pageNote {
+	padding: 12px;
+	color: #999;
+	font-size: xx-small;
+	text-align: center;
+	letter-spacing: 1pt;
+}
+.category_icon {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+}
+/* switching class */
+.sw_class_0 {
+	padding: 3px;
+	border: 2px dashed #efefef;
+	color: #999;
+	background: #fdfdfd;
+	border-top: none;
+	border-bottom: none;
+}
+.sw_class_1 {
+	padding: 3px;
+	color: #888;
+	border: 2px dashed #f2f2f2;
+	background: #f6f6f6;
+	border-top: none;
+	border-bottom: none;
+}
+/* selected option */
+.selected {
+	color: #000;
+	border: 1px solid #ddd;
+	background: #eee;
+}
+/* content block */
+.contentBlock {
+	color: grey;
+	background: #fff;
+	border: 3px solid #eee;
+	border-left: none;
+	border-right: none;
+}
+/* standard block */
+.block {
+	background: #f6f6f6;
+	color: #888;
+	border: 2px solid #eee;
+}
+.block H3 {
+	font-size: 10pt;
+	letter-spacing: 1px;
+	color: #333;
+}
+.block H3 IMG {
+	float: left ;
+	margin: 4px;
+}
+.block A, .block A:visited, .block A:link {
+	color: #666;
+}
+.block A:hover {
+	color: #bbb;
+}
+.block .link {
+	padding: 0px 10px 0px 10px;
+}
+.block .MenuList LI:hover {
+	background: #EFF1F7 url("block-link-hover.png") repeat-x;
+	border: 1px solid #efefef;
+	border-left: none;
+	border-right: none;
+}
+#td_blockL .block, #td_blockR .block {
+	width: 200px;
+	background: #e0e0e0 url("block-background.png") repeat-y;
+	border: none;
+}
+#td_blockL .block .body, #td_blockR .block .body {
+	background: url("block-top.png") no-repeat;
+}
+#td_blockL .block .footer, #td_blockR .block .footer {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	height: 30px;
+	background: url("block-bottom.png") no-repeat;
+}
+#td_blockL .block H3, #td_blockR .block H3 {
+	margin: 3px;
+	padding: 15px;
+	padding-bottom: 3px;
+}
+#td_blockL .block .content, #td_blockR .block .content {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#td_blockC .block H3 {
+	font-size: 14pt;
+}
+#td_blockC .block {
+	padding: 10px;
+}
+#td_blockC .block .content {
+	font-size: small;
+	padding: 10px;
+}
+/* button container */
+.buttons {
+	color: #888;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.buttons A {
+	color: #888;
+	padding: 4px;
+	border: 1px solid inherit;
+}
+.buttons A:hover {
+	background: #f8f8f8;
+	color: #2FACFF;
+	border: 1px solid #ccc;
+}
+/* data tables */
+.data {
+	border: 1px solid #f6f6f6;
+}
+.data TD {
+	padding: 2px;
+	border: 1px solid #eee;
+	vertical-align: middle;
+}
+.data .head TD {
+	padding: 3px;
+	font-weight: bold;
+	background: #e7e7e7;
+	border: 1px solid #d0d0d0;
+	text-align: left;
+	color: #888;
+}
+.data .id {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	vertical-align: middle;
+	font-size: medium;
+}
+/* info box */
+.info {
+	border: 2px solid #CFE0E5;
+	border-left: none;
+	border-right: none;
+	background: #F2F8FF;
+	color: #859DB0;
+}
+.info h3 {
+	color: #144160;
+}
+/* error box */
+.error {
+	border: 2px solid #FFBBBB;
+	border-left: none;
+	border-right: none;
+	background: #FFEDE9;
+	color: #e00;
+}
+.error h3 {
+	color: #f00;
+}
+/* normal date */
+.date {
+	color: #666666;
+}
+/* Panel */
+.panel {
+	border: 1px solid #eee;
+	background: #fcfcfc;
+}
+.panel .icon {
+	font-size: 7pt;
+	border: 1px solid #fcfcfc;
+}
+.panel .icon:hover {
+	background: #F5F7FF;
+	border: 1px solid #D3DFFF;
+}
+/* profile signature */
+.signature {
+	margin: 3px;
+	border-top: 1px solid #bbbbbb;
+	color: #888888;
+}
+/* profile avatar */
+.avatar {
+	margin: 3px;
+	padding: 3px;
+	background: #fff url("avatar-background.png");
+}
+.avatar IMG {
+	margin: 0px;
+	padding: 0px;
+}
+/* chart */
+.chart {
+	font-size: xx-small;
+	color: #333;
+	margin: 3px;
+}
+.chart .bar {
+	border: 1px solid #f0f0f0;
+	display: block;
+	margin: 3px;
+}
+.chart .progress {
+	color: #000;
+	background: #E6EAF0;
+	border: 1px solid #CDD0D6;
+}
+/* calendar */
+.calendar {
+	color: #666;
+}
+.calendar TD {
+	padding: 1px;
+	border: 1px solid #eee;
+}
+.calendar .head TD {
+	border: 1px solid #ddd;
+	background: #f6f6f6;
+}
+/* tbox 1 */
+.tbox1 H3 {
+	color: #666;
+}
+.tbox1 {
+	border: 2px solid #D8D6FF;
+	color: #666;
+	background: #EAF0FF;
+}
+.tbox1 a {
+	color: #06c;
+}
+#td_blockL .tbox1, #td_blockR .tbox1 {
+	background: url("tbox1-background.png") repeat-y;
+}
+#td_blockL .tbox1 .body, #td_blockR .tbox1 .body {
+	background: url("tbox1-top.png") no-repeat;
+}
+#td_blockL .tbox1 .footer, #td_blockR .tbox1 .footer {
+	background: url("tbox1-bottom.png") no-repeat;
+}
+
+
+/* tbox 2 */
+.tbox2 {
+	color: #ddd;
+}
+.tbox2 H3 {
+	color: #eee;
+}
+.tbox2 {
+	border: 2px solid #555;
+	background: #888;
+}
+.tbox2 a {
+	color: #eee;
+}
+#td_blockL .tbox2, #td_blockR .tbox2 {
+	background: url("tbox2-background.png") repeat-y;
+}
+#td_blockL .tbox2 .body, #td_blockR .tbox2 .body {
+	background: url("tbox2-top.png") no-repeat;
+}
+#td_blockL .tbox2 .footer, #td_blockR .tbox2 .footer {
+	background: url("tbox2-bottom.png") no-repeat;
+}
+
+
+/* tbox 3 */
+.tbox3 A {
+	color: #E3F499;
+}
+.tbox3 H3 {
+	color: #2A5C15;
+}
+.tbox3 {
+	color: #666;
+	border: 2px solid #98E183;
+	background: #F2FFDC;
+}
+.tbox3 a {
+	color: #eee;
+}
+#td_blockL .tbox3, #td_blockR .tbox3 {
+	background: url("tbox3-background.png") repeat-y;
+}
+#td_blockL .tbox3 .body, #td_blockR .tbox3 .body {
+	background: url("tbox3-top.png") no-repeat;
+}
+#td_blockL .tbox3 .footer, #td_blockR .tbox3 .footer {
+	background: url("tbox3-bottom.png") no-repeat;
+}
+
+/* pager */
+.pager {
+	color: #888;
+	background: #f3f3f3;
+}

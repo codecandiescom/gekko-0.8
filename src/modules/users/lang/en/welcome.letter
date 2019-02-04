@@ -1,0 +1,18 @@
+Welcome to {C_SITE.NAME}, {V_REALNAME}!
+
+Username: {V_USERNAME}
+Password: {V_PASSWORD}
+Confirmation code: {V_CONFIRMATION_CODE}
+
+You may use this information to
+
+Login:
+{=createLink("index.php/module=users/action=login")=}
+
+Confirm your account:
+{=createLink("index.php/module=users/action=confirm")=}
+
+NOTE: Remember that if a confirmation code was sent to you, you may confirm your account before login.
+
+--
+{C_SITE.NAME} - <{C_SITE.CONTACT_MAIL}>

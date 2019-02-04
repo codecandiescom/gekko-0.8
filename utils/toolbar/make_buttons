@@ -1,0 +1,3 @@
+#!/bin/bash
+for i in `ls button_faces`; do composite button_faces/$i base.png output/$i; done
+

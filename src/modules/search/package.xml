@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package version="1.0" type="module">
+	<module>
+		<name>search</name>
+		<group>26</group>
+		<author><![CDATA[J. Carlos Nieto &lt;<a href="mailto:xiam@users.sourceforge.net">xiam@users.sourceforge.net</a>&gt;]]></author>
+		<homepage><![CDATA[<a href="http://www.gekkoware.org">http://www.gekkoware.org</a>]]></homepage>
+		<phpver>4.3</phpver>
+	</module>
+	<release>
+		<version>0.8</version>
+		<requires>
+			<module>groups</module>
+			<module>modules</module>
+		</requires>
+		<author><![CDATA[J. Carlos Nieto &lt;<a href="mailto:xiam@users.sourceforge.net">xiam@users.sourceforge.net</a>&gt;]]></author>
+		<notes>
+			<![CDATA[
+
+			]]>
+		</notes>
+		<changelog>
+			<![CDATA[
+
+			]]>
+		</changelog>
+	</release>
+</package>
